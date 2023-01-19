@@ -13,7 +13,7 @@ For music generation using AI, we used the Panda et al. TAFFC Dataset - 2018, al
 
 ![Russell model: Arousal Valence quadrants](/Two-dimensional-valence-arousal-space.png)
 
-**Other Datasets we considered but discarded later.**
+**Other Datasets we considered but discarded later.** \newline
 We had 2 approaches to follow for music generation.
 - Use raw mp3 or wav files and train models like JukeBox and Wavenet architectures to generate new music.
 - Use MIDI formatted files of these audio and use recurrent neural networks like LSTM or convolutional neural networks to train.
