@@ -3,7 +3,9 @@ A multimodal machine learning algorithm using convolutional and recurrent neural
 
 ## 1.Introduction
 Music or sound is an important part of a human’s cognition. The right music according to the context of a video accentuates the correct perception of the message put forward. However, the cost of music production is still high. Using AI to generate music upon detection of the emotion behind the video will increase the return on investment especially music for short byte size videos. Applications range from entertainment to online education. 
+
 AI seems to be a potential aspect in the future of the music production industry. AI models that train on previously recorded song clips can raise concerns about its ethical implications of copyrights and style transfers. But such style transfers are already part of the natural creative process. Furthermore, innovation can be only done with experimentation in the studio; AI accelerates this innovation by creating millions of combinations of notes, chords or octaves. 
+
 Our goal is to create background music for a video which has characters speaking and expressing their emotions through their voice and facial expressions. Judging the context of the video correctly via emotions and changing background music accordingly throughout the video determines the success of this project. 
 
 ## 2. Data Collection
@@ -13,7 +15,8 @@ For music generation using AI, we used the Panda et al. TAFFC Dataset - 2018, al
 
 ![Russell model: Arousal Valence quadrants](/Two-dimensional-valence-arousal-space.png)
 
-**Other Datasets we considered but discarded later.** \newline
+**Other Datasets we considered but discarded later.** 
+
 We had 2 approaches to follow for music generation.
 - Use raw mp3 or wav files and train models like JukeBox and Wavenet architectures to generate new music.
 - Use MIDI formatted files of these audio and use recurrent neural networks like LSTM or convolutional neural networks to train.
@@ -35,6 +38,7 @@ Q2: Negative valence, positive arousal(Anger, Disgust, Fear)
 Q3: Negative valence, negative arousal(Sad)
 Q4: Positive valence, negative arousal(Calm, Neutral)
 4 LSTM models were trained on 4 sets of datasets or the 4 quadrants in the Arousal Valence map. 4 best models were saved.
+
 ## 4. Results
 The audio emotion recognition model has a test accuracy around 80% and a validation accuracy is about 60% with 35 epochs. Among all emotions, the precision on anger, calm and surprise are above 60%, while the remaining emotions have precision from 43%~55%. As the number of epochs increases, the training loss continues to decrease to around 0.4 while the testing loss (in this case, validation loss) decreases to about 1.4. The model is slightly overfitting.
  
@@ -42,6 +46,7 @@ The visual emotion recognition model achieves 92%+ validation accuracy on the da
 
 After the emotion is detected and mapped to the Arousal Valence map, the corresponding best model is picked to predict the music. 
 A sequence of notes are predicted after providing some random initial notes to the picked trained LSTM neural network. The length of the notes to be predicted can be set according to us or as the length of the video.
+
 An output.mid(MIDI output file) of length 240 notes(arbitrary) is generated and can be downloaded. 
 ## 5. Next steps
 The Ravdess dataset we used to train the emotion recognition model has significant limitations. The actors simply repeat the same sentence in different emotions, so they exaggerate their facial expression and change their tone deliberately. In real life, human conversations are more complicated than a simple sentence and human facial expressions could have multiple interpretations. For instance, a man can speak happily with a frown. If we have more time to work on, we will collect data from real life to add data diversity. Moreover, videos in the Ravdess have all actors facing the camera, so our emotion recognition model performs poorly on video with people not facing the camera directly. Taking video from different angels could help the model learn human emotions that fit better in real life scenarios.
