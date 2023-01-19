@@ -10,7 +10,7 @@ Our goal is to create background music for a video which has characters speaking
 We used the online data set the Ryerson Audio-Visual Database of Emotional Speech and Song (RAVDESS)to train the emotion recognition model. This data set contains both audio and video, with 24 professional actors (12 female, 12 male) saying two statements in a neutral North American accent, and it includes eight emotions, which are natural, calm, happy, sad, angry, fearful, disgust, and surprised. In addition, each expression is produced in two levels of emotional intensity (normal, strong), with each actor performing 60 trials of speech. The audio model used the RAVDESS’s Speech file with 1440 files, while the visual model used the RAVDESS’s Video Speech data with 2880 files.
 
 For music generation using AI, we used the Panda et al. TAFFC Dataset - 2018, also popularly known as the 4Q Audio Emotion dataset or Music Emotion Recognition dataset. This is a public dataset consisting of 900 audio clips (mp3 files each of duration of 30 seconds) which have been annotated into 4 quadrants of Arousal-Valence 2 dimensional chart according to the Russell model. These 900 audio clips are divided into 4 different folders for each quadrant. 
-![Russell model: Arousal Valence quadrants]([https://www.researchgate.net/profile/Lung-Hao-Lee-2/publication/304124018/figure/fig1/AS:374864755085312@1466386130906/Two-dimensional-valence-arousal-space.png])
+![Russell model: Arousal Valence quadrants](https://www.researchgate.net/profile/Lung-Hao-Lee-2/publication/304124018/figure/fig1/AS:374864755085312@1466386130906/Two-dimensional-valence-arousal-space.png)
 
 **Other Datasets we considered but discarded later.**
 We had 2 approaches to follow for music generation.
