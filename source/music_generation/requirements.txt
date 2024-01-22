@@ -1,0 +1,5 @@
+pydub
+wavenet
+tf_slim
+pyfluidsynth
+pretty_midi
